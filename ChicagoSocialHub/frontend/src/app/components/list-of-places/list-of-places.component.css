@@ -1,0 +1,59 @@
+table {
+    width: 100%;
+}
+
+.mat-column-right {
+    text-align: center;
+}
+
+.mat-header-cell {
+    background-color: #002bff21;
+    font-weight: bolder;
+    font-display: fallback;
+}
+
+.mat-card{
+    border-radius: 16px;
+}
+.gm-style-pbc{
+    border-radius: 16px; 
+}
+
+.back{
+    float: right;
+}
+
+
+svg{
+    background-color: aliceblue;
+}
+
+rect.bar {
+    fill: violet;
+}
+
+rect.bar:hover{
+    fill:pink;
+}
+
+/* 
+.axis-title {
+    fill: none;
+    stroke: black;
+    stroke-width: 0.5px;
+} */
+
+.x axis{
+    fill: none;
+      stroke: black;
+      stroke-width: 2px;
+  }
+
+  .y axis{
+    fill: none;
+      stroke: black;
+      stroke-width: 2px;
+      font-weight: bold;
+  } 
+
+ 

@@ -1,0 +1,45 @@
+.axis {
+    font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.axis-title {
+    fill: none;
+    stroke: black;
+    stroke-width: 0.5px;
+}
+
+
+
+
+
+.line {
+    fill: none;
+    stroke: green;
+    stroke-width: 1.5px;
+}
+
+
+.domain{
+    stroke-width: 2px;
+}
+
+.tick{
+font-weight: bolder;
+}
+
+.checkbox-inline{
+    color: blue;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.back{
+    float: right;
+}

@@ -1,0 +1,92 @@
+
+<div>
+    <br>
+    <mat-card>
+      <div class="floatBtnHolder">
+        <button mat-raised-button color="primary" routerLink="/home" class="pullLeft">
+          <mat-icon>home</mat-icon>    
+          &nbsp; &nbsp; &nbsp; 
+          Home
+        </button>
+        
+        <button mat-raised-button color="primary" routerLink="/list_of_places" style="float: right" class="pullRight">
+          <mat-icon>keyboard_arrow_left</mat-icon>    
+          &nbsp; &nbsp; &nbsp; 
+          Back
+        </button>
+      </div>
+      <br>
+      
+      <mat-divider></mat-divider>
+      <br>
+      
+      
+      <table mat-table [dataSource]="stationsList" *ngIf="dispTable" style="width: 100%" >
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef>Station ID</th>
+          <td mat-cell *matCellDef="let element" [ngStyle]="{'background-color': element.alert}"> {{element.id}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="stationName">
+          <th mat-header-cell *matHeaderCellDef>Station Name</th>
+          <td mat-cell *matCellDef="let element" [ngStyle]="{'background-color': element.alert}"> {{element.stationName}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="availableBikes">
+          <th mat-header-cell *matHeaderCellDef>Available Bikes</th>
+          <td mat-cell *matCellDef="let element" [ngStyle]="{'background-color': element.alert}"> {{element.availableBikes}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="availableDocks">
+          <th mat-header-cell *matHeaderCellDef>Available Docks</th>
+          <td mat-cell *matCellDef="let element" [ngStyle]="{'background-color': element.alert}"> {{element.availableDocks}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="is_renting">
+          <th mat-header-cell *matHeaderCellDef>Is Renting</th>
+          <td mat-cell *matCellDef="let element" [ngStyle]="{'background-color': element.alert}"> {{element.is_renting}} </td>
+        </ng-container>
+        
+        <!-- <ng-container matColumnDef="lastCommunicationTime">
+          <th mat-header-cell *matHeaderCellDef>lastCommunicationTime </th>
+          <td mat-cell *matCellDef="let element" [ngStyle]="{'background-color': element.alert}"> {{element.lastCommunicationTime}} </td>
+        </ng-container> -->
+        
+        <!-- <ng-container matColumnDef="latitude">
+          <th mat-header-cell *matHeaderCellDef>Latitude</th>
+          <td mat-cell *matCellDef="let element" [ngStyle]="{'background-color': element.alert}"> {{element.latitude}} </td>
+        </ng-container> -->
+        
+        <!-- <ng-container matColumnDef="longitude">
+          <th mat-header-cell *matHeaderCellDef>Longitude</th>
+          <td mat-cell *matCellDef="let element" [ngStyle]="{'background-color': element.alert}"> {{element.longitude}} </td>
+        </ng-container> -->
+        
+        <ng-container matColumnDef="totalDocks">
+          <th mat-header-cell *matHeaderCellDef>Total Docks</th>
+          <td mat-cell *matCellDef="let element" [ngStyle]="{'background-color': element.alert}"> {{element.totalDocks}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="occupancy">
+          <th mat-header-cell *matHeaderCellDef>Occupancy</th>
+          <td mat-cell *matCellDef="let element" [ngStyle]="{'background-color': element.alert}"> {{element.availableBikes/element.totalDocks | percent: '1.2-2'}}</td>
+        </ng-container>
+        
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef>Status</th>
+          <td mat-cell *matCellDef="let element" [ngStyle]="{'background-color': element.alert}"> {{element.status}} </td>
+        </ng-container>
+        
+        <!-- <th mat-header-cell *matHeaderCellDef>totalDocks</th> -->
+        
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        
+      </table>
+      
+      
+    </mat-card>
+    
+  </div>
+  
+  

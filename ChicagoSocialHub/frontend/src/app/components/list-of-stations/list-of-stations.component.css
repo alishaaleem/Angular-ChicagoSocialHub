@@ -1,0 +1,27 @@
+table {
+    width: 100%;
+}
+
+.mat-column-right {
+    text-align: center;
+}
+
+agm-map {
+    height: 500px;
+}
+
+.mat-header-cell {
+    background-color: #002bff21;
+    font-weight: bolder;
+    font-display: fallback;
+}
+
+.mat-card{
+    border-radius: 16px;
+}
+.gm-style-pbc{
+    border-radius: 16px; 
+}
+.back{
+    float: right;
+}

@@ -1,0 +1,70 @@
+
+
+
+
+<div>
+    <mat-card class="buttons">
+        <mat-divider></mat-divider>
+        <button class="home" style="float:left" mat-raised-button color="primary" routerLink="/home">
+          Home
+          &nbsp; &nbsp; &nbsp; 
+          <mat-icon>home</mat-icon>    
+        </button>
+        &nbsp; &nbsp;
+      
+      <button class="back" style="float:right" mat-raised-button color="primary" routerLink="/home">
+        Back
+        &nbsp; &nbsp; &nbsp; 
+        <mat-icon>keyboard_backspace</mat-icon>    
+      </button>
+      &nbsp; &nbsp;
+    </mat-card>
+    <mat-divider></mat-divider>
+
+  <img
+  src="https://static1.squarespace.com/static/51a103d2e4b0697b9ba9ad4b/t/5574f175e4b0061829d9a093/1433727355864/?format=2500w" style="width:100%;height:1000px;"> 
+ 
+  <mat-card class="go">
+          <mat-divider></mat-divider>
+    <br>
+   
+    <form [formGroup]="createForm" class="create-form">
+
+
+
+      <mat-form-field class="field-full-width">
+        <mat-label color=blue> Find</mat-label>
+        <input align="start" matInput formControlName="find" #find>
+        <mat-hint [ngStyle]="{color: hintColor}">Restaurants, Bars, Cafe, ... </mat-hint>
+      </mat-form-field>
+
+      <br><br>
+
+      <mat-form-field class="field-full-width">
+        <mat-label color=blue> Where</mat-label>
+        <input align="start" matInput formControlName="where" #where>
+        <mat-hint [ngStyle]="{color: hintColor}">Near me, ... </mat-hint>
+
+      </mat-form-field>
+
+      <br><br>
+      <mat-form-field class="field-full-width">
+        <mat-label color=blue> Zipcode</mat-label>
+        <input align="start" matInput formControlName="zipcode" #zipcode>
+        <mat-hint [ngStyle]="{color: hintColor}">Near me, ... </mat-hint>
+
+      </mat-form-field>
+      <br><br>
+      <mat-divider></mat-divider>
+      <br><br>
+
+      <button class="gobutton" type="submit" (click)="findPlaces(find.value,  where.value, zipcode.value)" mat-raised-button>
+        Go
+        &nbsp; &nbsp; &nbsp;
+        <mat-icon>search</mat-icon>
+      </button>
+
+
+    </form>
+  </mat-card>
+</div>

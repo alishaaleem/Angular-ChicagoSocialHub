@@ -1,0 +1,165 @@
+<div>
+      <button class="home" style="float:right; position:absolute;background-color: black" mat-raised-button color="primary" routerLink="/home">
+        Home
+        &nbsp; &nbsp; &nbsp; 
+        <mat-icon>home</mat-icon>    
+      </button>
+</div>
+
+<div class="jumbotron">
+  <div class="container text-center" style="text-align:center;">
+    <h1>Chicago Social Hub</h1>      
+    <p>Alisha Anjum Aleem & Monali Balani </p>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row content">
+    
+
+    <div class="col-sm-9">
+      <hr>
+      <h2>Feature</h2>
+      <h5><span class="glyphicon glyphicon-time"></span> Post by Monali, May 3, 2019.</h5>
+      <p>Search for places on a street and show divvy nearest dock stations
+        for a selected place. And a Dashboard to show the daily and
+        hourly average numbers of available docks for every dock station
+        based on the user selection for the past week, month, and year;
+        divvy data log stored on ElasticSearch server</p>
+    
+      
+      <hr>
+      <h2>Requirements</h2>
+      <h5><span class="glyphicon glyphicon-time"></span> Post by Alisha, May 5, 2019.</h5>
+      <ul>
+        <li>Search for places on a street or by zipcode or by both street and zipcode</li>
+        <li>Detects User’s Current location</li>
+        <li>Accesses Yelp(Elasticsearch server) and Divvy Servers</li>
+        <li>Displays List of Places and can be sorted based on ratings and review counts</li>
+        <li>Show divvy nearest dock stations for a selected place (Using PostgreSQL)</li>
+        <li>Develop Dashboard to show the daily and hourly average numbers of available docks for every dock station based on the user selection for the past week, month, and year
+        </li>
+        <li>The divvy data log is stored on ElasticSearch server
+        </li>
+        <li>Create alerts from logstash from those DockSations that are more than 90% full</li>
+      </ul> 
+      <hr>
+      
+    
+      <h2>Phase 2 - Additional Requirements</h2>
+      <h5><span class="glyphicon glyphicon-time"></span> Post by Alisha, May 5, 2019.</h5>
+      <ul>
+        <li>Detects User’s Current location</li>
+        <li>Displays List of Places and can be sorted based on ratings and review counts</li>
+        <li>Develop Dashboard to show the daily and hourly average numbers of available docks for every dock station based on the user selection for the past week, month, and year
+        </li>
+        <li>The divvy data log is stored on ElasticSearch server
+        </li>
+        <li>Create alerts from logstash from those DockSations that are more than 90% full</li>
+      </ul> 
+      <hr>
+     
+      <h2>Navigation</h2>
+      <h5><span class="glyphicon glyphicon-time"></span> Post by Alisha, May 5, 2019.</h5>
+      <ul>
+        <li>The Webapp is hosted on http://localhost:4200/home</li>
+        <li>There are two Buttons</li>
+        <ul>
+          <li>Places - Lets you search for place by Street name And/Or Zipcode</li>
+          <li>About this App</li>
+        </ul>
+        <li>The Places Button takes you to find component</li>
+        <ul>
+          <li>Search for place - Mandatory Field</li>
+          <li>Search by StreetName (and/or)</li>
+          <li>Search by Zipcode</li>
+        </ul>
+        <li>Click the Button Go for your results</li>
+        <li>The list-of-places component displays all the list of places based on the elastic search query</li>
+        <ul>
+          <li>Features in this component</li>
+          <ul>
+            <li>Home - Takes you to the homepage</li>
+            <li>Divvy Near By - Takes you to the list-of-stations component</li>
+            <li>Find Another Place - Takes you to the find component where you can search for another place</li>
+            <li>Bar Chart - Displays the Ratings of listed Restaurants in a bar chart</li>
+            <li>Bar Review - Displays the Review Count of listed Restaurants in a bar chart</li>
+            <li>Alert Table - creates alerts for those dock stations that are more than 90% full</li>
+            <li>Get My Current Location - This displays teh current location marker in the agm-map</li>
+            <li>Map - Displays the list of Restaurants in agm-markers</li>
+            <li>Back - Takes you back to the previous page</li>
+          </ul>
+        </ul>
+        <li>The list-of-stations component displays 3 Divvy Stations based on the selected place's latitude and longitude</li>
+        <ul>
+          <li>Features in this component</li>
+          <ul>
+            <li>Home - Takes you to the homepage</li>
+            <li>Find Another Place - Takes you to the find component where you can search for another place</li>
+            <li>Stacked Bar  - Displays the availableBikes and availableDocks of the listed stations in a stacked bar</li>
+            <li>Get My Current Location - This displays teh current location marker in the agm-map</li>
+            <li>Map - Displays the list of Stations in agm-markers</li>
+            <li>Realtime Chart - Takes you to the realtimechart component</li>
+            <li>Line Chart - Takes you to the linechart component</li>
+            <li>Dashboard - Takes you to the Dashboard component</li>
+            <li>Back - Takes you back to the previous page</li>
+          </ul>
+        </ul>
+        <li>The realtimechart component displays  real-time/log data for
+            Divvy stations (hourly, daily, weekly) by line charts with Simple
+            Moving Averages (hourly and daily SMA) on the SAME chart </li>
+        <ul>
+          <li>Features in this component</li>
+          <ul>
+            <li>Home - Takes you to the homepage</li>
+            <li>Select Another Station - Takes you to the list-of-stations component where you can click on another station</li>
+            <li>Time Range - Data for Past 1 hour, 24 hours and 7 days</li>
+            <li>SMA Checkboxes - lets you select SMA for 1 hour or 24 hours or both</li>
+            <li>Back - Takes you back to the previous page</li>
+          </ul>
+        </ul>
+        <li>The linechart component displays line real-time/log data for
+            Divvy stations (hourly, daily, weekly) by line chart
+            </li>
+        <ul>
+          <li>Features in this component</li>
+          <ul>
+              <li>Home - Takes you to the homepage</li>
+              <li>Select Another Station - Takes you to the list-of-stations component where you can click on another station</li>
+              <li>Time Range - Data for Past 1 hour, 24 hours and 7 days</li>
+              <li>Back - Takes you back to the previous page</li>
+            </ul>
+        </ul>
+        <li>The Dashboard component displays 3 Divvy Stations based on the selected place's latitude and longitude</li>
+        <ul>
+          <li>Daily Status</li>
+          <ul>
+            <li>Displays the daily average numbers of available docks for every dock station
+                based on the user selection for the past week, month, and year</li>
+            <li>Added Loading feature until the data is retrieved from the elastic search server</li>
+           
+          </ul>
+          <li>Hourly Status</li>
+            <ul>
+                <li>Displays the hourly average numbers of available docks for every dock station
+                    based on the user selection for the past week, month, and year</li>
+                <li>Added Loading feature until the data is retrieved from the elastic search server</li>
+               
+            </ul>
+          
+        </ul>
+      </ul> 
+      
+      <hr>
+      <h2>MVC Architecture</h2>
+      <h5><span class="glyphicon glyphicon-time"></span> Post by Monali, May 3, 2019.</h5>
+      <div class="image" style="width:100%;height:700px;"></div>
+    
+     
+
+      
+          
+        
+      
+    </div>
+  </div>
+</div>

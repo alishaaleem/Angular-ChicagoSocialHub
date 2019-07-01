@@ -1,0 +1,28 @@
+
+
+.bar {
+    fill: steelblue;
+}
+
+.bar:hover {
+    fill: brown;
+}
+
+.axis-title {
+    fill: none;
+    stroke: black;
+    stroke-width: 0.5px;
+}
+
+.x axis{
+    fill: none;
+      stroke: black;
+      stroke-width: 0.5px;
+  }
+
+  .y axis{
+    fill: none;
+      stroke: black;
+      stroke-width: 0.5px;
+      font-weight: bold;
+  }

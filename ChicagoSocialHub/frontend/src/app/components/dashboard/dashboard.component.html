@@ -1,0 +1,83 @@
+
+<mat-card>
+  
+  <h2>{{ title }}</h2>
+  
+  <br>
+  
+  <button mat-raised-button color="primary" routerLink="/home">
+    Home
+    &nbsp; &nbsp; &nbsp;
+    <mat-icon>home</mat-icon>
+  </button>
+  &nbsp; &nbsp;
+  
+  
+  <button mat-raised-button color="primary" routerLink="/list_of_stations">
+    Select Another Station
+    &nbsp; &nbsp; &nbsp;
+    <mat-icon>directions_bike</mat-icon>
+  </button>
+  &nbsp; &nbsp;&nbsp;
+  <!-- <mat-form-field>
+    <mat-label>User's Time Selection</mat-label>
+    <mat-select [(ngModel)]="selectedValue" name="time">
+      onselectionchange="timewindow(selectedValue)" -->
+      <!-- <mat-option *ngFor="let option of timeselection" [value]="option.value">
+        {{option.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field> --> 
+  <button mat-raised-button color="primary" [matMenuTriggerFor]="menu">User's Time Selection<mat-icon>arrow_drop_down</mat-icon></button>
+  <mat-menu #menu="matMenu">
+    <button (click)="show_line_chart(168)" mat-menu-item>Past Week</button>
+    <button (click)="show_line_chart(720)" mat-menu-item>Past Month</button>
+    <button (click)="show_line_chart(8760)" mat-menu-item>Past Year</button>
+  </mat-menu>
+  
+  &nbsp; &nbsp;&nbsp; 
+  &nbsp; &nbsp;
+  
+  <button class ="bb" mat-raised-button color="primary" routerLink="/list_of_stations" style="float: right">
+    Back
+    &nbsp; &nbsp; &nbsp;
+    <mat-icon>keyboard_backspace</mat-icon>
+  </button>
+  
+  <br><br>
+  <mat-divider></mat-divider>
+  <br>
+</mat-card>
+
+<mat-card>
+  <div>
+    <!-- *ngIf="showLoadingImg1" -->
+    <div class="daily" style="position: relative;">
+      <div class="spin1" *ngIf="showLoadingImg1"> 
+        <mat-spinner ></mat-spinner>
+        <div style="position:relative; left: -80px;">
+          {{ showText }}
+        </div>
+      </div>
+      
+      <svg class="shadow1" width="1500" height="600" id="svg1" style="background-color:pink" id=svg1>
+        <title>Daily Status</title>
+        <text x="45%" y="70" font-family="sans-serif" font-size="20px" font-weight="bold" fill="Black">Daily Status</text>
+      </svg> 
+    </div>
+    <br>
+    <br>
+    <div class="hourly" style="position: relative;">
+      <div class="spin2" *ngIf="showLoadingImg2" >
+        <mat-spinner ></mat-spinner> 
+        <div style="position:relative;left: -80px;">
+          {{ showText }}
+        </div>
+      </div>
+      <svg class="shadow2"width="1500" height="600" id="svg2" style="background-color:lavender" id=svg2>
+        <title>Hourly Status</title>
+        <text x="45%" y="70" font-family="sans-serif" font-size="20px"  font-weight="bold" fill="Black">Hourly Status</text>
+      </svg>
+    </div>
+  </div>
+</mat-card>
