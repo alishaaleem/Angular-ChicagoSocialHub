@@ -114,7 +114,7 @@ const routes: Routes = [
 /////////////////////////////////////////////////////////////////////////////////////
 
 
-    AgmCoreModule.forRoot({apiKey: 'AIzaSyCUmCCd3hjHNRNGCYKi_o92wUEHzB_8j_E'+ '&libraries=visualization'}),
+    AgmCoreModule.forRoot({apiKey: 'yourGoogleAPI'+ '&libraries=visualization'}),
     FormsModule,
     NgbModule
   ],
