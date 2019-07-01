@@ -1,6 +1,6 @@
 Chicago Social Hub
 
-By Aleem, Alisha(A20379905) and Balani,Monali(A20410147)
+By Aleem, Alisha and Balani,Monali
 
 
 -------------------------------------------------------------------------------------------------------------
